@@ -9,17 +9,19 @@ const Display = (props) =>{
 
     return(
       <div className="display-container">
+
         <section className="scoreboard">
-          <div className="topRow">
-            <div className="home">
-              <h2 className="home__name">Score:</h2>
-              <div className="home__score">{props.hits}</div>
+            
+             <h1>Batter Up!</h1>
+            <div className="score-div">
+              <h2 className="score">Score:</h2>
+              <div className="score-count">{props.hits}</div>
             </div>
-          </div>
+         
           <div className="counter">
             <h3 className="strikes">Strikes: {props.strikes}</h3>
             <h3 className="balls">Balls: {props.balls}</h3>
-            <h3>Fouls: {props.fouls}</h3>
+            <h3 className = "fouls">Fouls: {props.fouls}</h3>
           </div>
         </section>
   
