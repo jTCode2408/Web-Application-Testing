@@ -3,23 +3,33 @@
 import React from 'react';
 
 
-    const Display = (props) => {
-        return (
-          <div className="balls-display">
-            <div className="balls">
-              <h3 className="balls-text">Balls:</h3>
-        <div className="balls-count">{props.balls}</div>
-            </div>
-            <div className="strikes-display">
-              <h3 className="strikes-text">Strikes:</h3>
-        <div className="strikes-count">{props.strikes}</div>
-            </div>
-            <div className="Inning">
-              <h3 className="inning-text">Inning:</h3>
-              <div className="inning-count">3</div>
+const Display = (props) =>{
+
+
+
+    return(
+      <div className="display-container">
+        <section className="scoreboard">
+          <div className="topRow">
+            <div className="home">
+              <h2 className="home__name">Score:</h2>
+              <div className="home__score">{props.hits}</div>
             </div>
           </div>
-        );
-      };
-      
-      export default Display;
+          <div className="counter">
+            <h3 className="strikes">Strikes: {props.strikes}</h3>
+            <h3 className="balls">Balls: {props.balls}</h3>
+            <h3>Fouls: {props.fouls}</h3>
+          </div>
+        </section>
+  
+      </div>
+  
+  
+    );
+  
+  
+  
+  };
+  
+  export default Display;

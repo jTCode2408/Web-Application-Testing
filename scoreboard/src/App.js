@@ -1,17 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Display from './Display';
+import Dashboard from './Dashboard';
+
 function App() {
+
+  const [ hits, setHits] = useState(0);
+  const [ balls, setBalls] = useState(0);
+  const [ strikes, setStrikes] = useState(0);
+  const [ innings, setInnings] = useState(1);
+  const [fouls, setFouls] = useState(0);
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         At-Bat
-        </p>
-        </header>
-    <Display/>
+    <div className="container">
+      <Display
+        hits = {hits}
+        balls = {balls}
+        strikes = {strikes}
+        innings = {innings}
+        fouls = {fouls}
+
+      />
+      <Dashboard
+        setHits = {setHits}
+        setBalls = {setBalls}
+        setStrikes = {setStrikes}
+        setInnings = {setInnings}
+        setFouls = {setFouls}
+        balls = {balls}
+        strikes = {strikes}
+        hits = {hits}
+        fouls = {fouls}
+      />
+
+
     </div>
   );
 }
